@@ -58,6 +58,33 @@ func (n *Node) insert(data int) {
 	}
 }
 
+// height passes through the nodes and returns the amount of levels the tree has.
+// It returns -1 if the tree is nil
+func (n *Node) height() int {
+	if n == nil {
+		return -1
+	}
+
+	left := n.Left.height()
+	right := n.Right.height()
+
+	if left > right {
+		return left + 1
+
+	} else {
+		return right + 1
+	}
+}
+
+// Height returns the height (number of levels) of the tree
+func (t *Tree) Height() int {
+	if t.Root == nil {
+		return -1
+	}
+
+	return t.Root.height()
+}
+
 // PrintInOrder prints the tree values in crescent order
 func PrintInOrder(n *Node) {
 	if n == nil {
