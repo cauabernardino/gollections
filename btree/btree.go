@@ -1,15 +1,22 @@
+/*
+Binary Search Tree
+
+- Only handles int for now
+*/
 package btree
 
 import (
 	"fmt"
 )
 
+// Node structure
 type Node struct {
 	Left  *Node
 	Right *Node
 	Data  int
 }
 
+// Tree structure
 type Tree struct {
 	Root *Node
 }
