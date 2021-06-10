@@ -2,12 +2,14 @@
 
 Simple implementations of common data structures in Go. First looking for application/functionality, then performance.
 
+*At first, all collections will work only for integer type.*
+
 1. [Binary Search Tree](btree/)
+2. [Set](set/)
 
 
 # To Do
 
-- Set
 - Linked Lists
 - Queue
 - Deque
