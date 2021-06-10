@@ -40,7 +40,7 @@ func main() {
 	fmt.Printf("---- Binary Search Tree Examples ----\n\n")
 
 	// Traversal Printings
-	fmt.Printf("In Order Traversal with Deque:\n")
+	fmt.Printf("In Order Traversal:\n")
 	btree.PrintInOrder(tree.Root)
 
 	fmt.Printf("\n\nLevel Order Traversal:\n")
@@ -61,6 +61,10 @@ func main() {
 	mySet.Add(3)
 	mySet.Add(4)
 	mySet.Add(5)
+
+	// Repeated values to show that it won't show twice in Set
+	mySet.Add(2)
+	mySet.Add(4)
 
 	fmt.Printf("\n---- Set Examples ----\n\n")
 	fmt.Println(mySet.Elements())
