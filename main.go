@@ -12,6 +12,7 @@ import (
 	"fmt"
 
 	"github.com/cauabernardino/gollections/btree"
+	"github.com/cauabernardino/gollections/set"
 )
 
 // Some list of numbers to check outputs
@@ -36,6 +37,8 @@ func main() {
 		tree.Insert(v)
 	}
 
+	fmt.Printf("---- Binary Search Tree Examples ----\n\n")
+
 	// Traversal Printings
 	fmt.Printf("In Order Traversal with Deque:\n")
 	btree.PrintInOrder(tree.Root)
@@ -47,4 +50,32 @@ func main() {
 	height := tree.Height()
 	fmt.Printf("\nHeight of tree: %d\n", height)
 
+	/*
+		Set Examples
+	*/
+
+	mySet := set.New()
+
+	mySet.Add(1)
+	mySet.Add(2)
+	mySet.Add(3)
+	mySet.Add(4)
+	mySet.Add(5)
+
+	fmt.Printf("\n---- Set Examples ----\n\n")
+	fmt.Println(mySet.Elements())
+
+	n1 := 6
+	n2 := 10
+
+	fmt.Printf("%d is element of Set: %v\n", n1, mySet.IsElement(n1))
+	fmt.Printf("%d is element of Set: %v\n", n2, mySet.IsElement(n2))
+
+	fmt.Printf("\nAdding the numbers in the set...\n\n")
+	mySet.Add(n1)
+	mySet.Add(n2)
+
+	fmt.Println(mySet.Elements())
+	fmt.Printf("%d is element of Set: %v\n", n1, mySet.IsElement(n1))
+	fmt.Printf("%d is element of Set: %v\n", n2, mySet.IsElement(n2))
 }
