@@ -1,7 +1,8 @@
 /*
 Binary Search Tree
 
-- Only handles int for now
+- An ordered and rooted binary tree whose internal nodes stores values greater than all the nodes
+in the left subtree and less than those in right subtree.
 */
 package btree
 
