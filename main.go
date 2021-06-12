@@ -12,12 +12,14 @@ import (
 	"fmt"
 
 	"github.com/cauabernardino/gollections/btree"
+	"github.com/cauabernardino/gollections/queue"
 	"github.com/cauabernardino/gollections/set"
 )
 
 func main() {
 	BinaryTreeExamples()
 	SetExamples()
+	QueueExamples()
 }
 
 /* Binary Search Tree Examples */
@@ -90,4 +92,32 @@ func SetExamples() {
 	fmt.Println(mySet.Elements())
 	fmt.Printf("%d is element of Set: %v\n", n1, mySet.IsElement(n1))
 	fmt.Printf("%d is element of Set: %v\n", n2, mySet.IsElement(n2))
+}
+
+/* Queue Examples*/
+func QueueExamples() {
+	q := queue.New(5)
+
+	fmt.Printf("\n---- Queue Examples ----\n")
+	// Checking the new Queue
+	fmt.Printf("\nCreated Queue:\n")
+	fmt.Println(q.Queue)
+
+	// Adding items
+	fmt.Printf("\nAdding values:\n")
+
+	q.Enqueue(1)
+	q.Enqueue(2)
+
+	fmt.Println(q.Queue)
+
+	// More items
+	q.Enqueue(3)
+	q.Enqueue(4)
+	q.Enqueue(5)
+	fmt.Println(q.Queue)
+
+	// If trying to add more than capacity
+	fmt.Printf("\nIf reaches capacity:\n")
+	q.Enqueue(6)
 }
