@@ -17,8 +17,8 @@ import (
 )
 
 func main() {
-	// BinaryTreeExamples()
-	// SetExamples()
+	BinaryTreeExamples()
+	SetExamples()
 	QueueExamples()
 }
 
