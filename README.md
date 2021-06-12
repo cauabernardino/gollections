@@ -8,10 +8,10 @@ First looking for application/functionality, then performance.
 
 1. [Binary Search Tree](btree/)
 2. [Set](set/)
+3. [Queue](queue/)
 
 
 # To Do
 
 - Linked Lists
-- Queue
 - Deque
