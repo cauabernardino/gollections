@@ -28,7 +28,7 @@ func (s *Set) Add(n int) {
 func (s *Set) Elements() []int {
 	var elements []int
 
-	for k, _ := range s.setMap {
+	for k := range s.setMap {
 		elements = append(elements, k)
 	}
 

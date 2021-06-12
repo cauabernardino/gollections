@@ -71,7 +71,6 @@ func (n *Node) height() int {
 
 	if left > right {
 		return left + 1
-
 	} else {
 		return right + 1
 	}
@@ -114,7 +113,6 @@ func PrintLevelOrder(root *Node) {
 			fmt.Printf("\n")
 			break
 		}
-
 		fmt.Printf("%d ", stack[index].Data)
 
 		if stack[index].Left != nil {
