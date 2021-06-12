@@ -31,16 +31,21 @@ func main() {
 	/*
 		Binary Search Tree Examples
 	*/
+
+	dataset := b1
 	tree := btree.New()
 
-	for _, v := range b1 {
+	for _, v := range dataset {
 		tree.Insert(v)
 	}
 
 	fmt.Printf("---- Binary Search Tree Examples ----\n\n")
 
+	fmt.Printf("Values:\n")
+	fmt.Println(dataset)
+
 	// Traversal Printings
-	fmt.Printf("In Order Traversal:\n")
+	fmt.Printf("\nIn Order Traversal:\n")
 	btree.PrintInOrder(tree.Root)
 
 	fmt.Printf("\n\nLevel Order Traversal:\n")
