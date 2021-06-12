@@ -56,15 +56,14 @@ func (q *Queue) Dequeue() int {
 
 	n := q.Queue[q.front]
 
-	q.rear--
-
+	// Shifting values by one position
 	tempQ := q.Queue[q.front+1:]
-
 	for i, v := range tempQ {
 		q.Queue[i] = v
 	}
-
 	q.Queue[q.size] = 0
+
+	q.rear--
 
 	return n
 }
