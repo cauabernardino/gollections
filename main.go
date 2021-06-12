@@ -17,8 +17,8 @@ import (
 )
 
 func main() {
-	BinaryTreeExamples()
-	SetExamples()
+	// BinaryTreeExamples()
+	// SetExamples()
 	QueueExamples()
 }
 
@@ -100,8 +100,7 @@ func QueueExamples() {
 
 	fmt.Printf("\n---- Queue Examples ----\n")
 	// Checking the new Queue
-	fmt.Printf("\nCreated Queue:\n")
-	fmt.Println(q.Queue)
+	fmt.Printf("\nCreated Queue: %v\n", q.Queue)
 
 	// Adding items
 	fmt.Printf("\nAdding values:\n")
@@ -109,15 +108,45 @@ func QueueExamples() {
 	q.Enqueue(1)
 	q.Enqueue(2)
 
-	fmt.Println(q.Queue)
+	fmt.Printf("\nQueue: %v\n", q.Queue)
 
 	// More items
 	q.Enqueue(3)
 	q.Enqueue(4)
 	q.Enqueue(5)
-	fmt.Println(q.Queue)
+	fmt.Printf("\nQueue: %v\n", q.Queue)
 
-	// If trying to add more than capacity
+	// // If trying to add more than capacity
 	fmt.Printf("\nIf reaches capacity:\n")
 	q.Enqueue(6)
+
+	// Checking first and last elements
+	fmt.Printf("\nChecking front element of the Queue: ")
+	fmt.Println(q.CheckFront())
+	fmt.Printf("Checking rear element of the Queue: ")
+	fmt.Println(q.CheckRear())
+
+	// Dequeue elements
+	fmt.Printf("\nDequeueing 2 elements: ")
+	fmt.Println(q.Dequeue(), q.Dequeue())
+
+	fmt.Printf("\nChecking front element of the Queue: ")
+	fmt.Println(q.CheckFront())
+	fmt.Printf("Checking rear element of the Queue: ")
+	fmt.Println(q.CheckRear())
+
+	fmt.Printf("\nQueue: %v\n", q.Queue)
+
+	// Adding new values
+	fmt.Printf("\nAdding new value...\n")
+
+	q.Enqueue(6)
+	q.Enqueue(7)
+
+	fmt.Printf("\nChecking front element of the Queue: ")
+	fmt.Println(q.CheckFront())
+	fmt.Printf("Checking rear element of the Queue: ")
+	fmt.Println(q.CheckRear())
+
+	fmt.Printf("\nQueue: %v\n", q.Queue)
 }
