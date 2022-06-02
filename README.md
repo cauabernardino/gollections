@@ -1,17 +1,18 @@
 # Gollections
 
-Simple implementations of common data structures in Go, for learning purposes.
-
-First looking for application/functionality, then performance.
-
-*At first, all collections will work only for integer type.*
-
-1. [Binary Search Tree](btree/)
-2. [Set](set/)
-3. [Queue](queue/)
+Simple implementations of common data structures and algorithms in Go, for learning purposes.
 
 
-# To Do
+1. [Data Structures](structures/)
+2. [Algorithms](algorithms/)
 
-- Linked Lists
-- Deque
+
+Check basic functionality with
+
+```bash
+# For algorithms
+$ go run main.go algo
+
+# For data structures
+$ go run main.go ds
+```

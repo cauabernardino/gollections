@@ -12,9 +12,9 @@ import (
 
 // Node structure
 type Node struct {
+	Data  int
 	Left  *Node
 	Right *Node
-	Data  int
 }
 
 // Tree structure
@@ -122,34 +122,5 @@ func PrintLevelOrder(root *Node) {
 		if stack[index].Right != nil {
 			stack = append(stack, stack[index].Right)
 		}
-
 	}
 }
-
-// // PrintLevelOrderWithDeque prints the tree values in order by tree level
-// func PrintLevelOrderWithDeque(root *Node) {
-// 	dq := deque.New()
-
-// 	dq.Append(root)
-
-// 	for {
-// 		if dq.Len() == 0 {
-// 			fmt.Printf("\n")
-// 			break
-// 		}
-
-// 		currInterface, _ := dq.PopLeft()
-
-// 		curr := currInterface.(*Node)
-
-// 		fmt.Printf("%d ", curr.Data)
-
-// 		if curr.Left != nil {
-// 			dq.Append(curr.Left)
-// 		}
-
-// 		if curr.Right != nil {
-// 			dq.Append(curr.Right)
-// 		}
-// 	}
-// }
